@@ -2,13 +2,13 @@ const contactUs = require("../Models/contactUsModel");
 
 //method to create a cart
 exports.addQuery = (req, res, next) => {
-  const { query, queryTitle, descIssue } = req.body;
+  const { query, queryTitle, description } = req.body;
 
   contactUs
     .create({
       query,
       queryTitle,
-      descIssue,
+      description,
     })
     .then((data) => {
       res.status(201).json({

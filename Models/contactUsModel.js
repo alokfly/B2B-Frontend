@@ -10,7 +10,7 @@ const contactUsSchema = new Schema({
     type: String,
   },
 
-  descIssue: {
+  description: {
     type: String,
     require: true,
   },
