@@ -76,9 +76,6 @@ exports.userSignup = (req, res) => {
 };
 
 exports.addMoreDetail = async (req, res) => {
-  const profileImage = req.files.profileImage;
-  const brandIcon = req.files.brandIcon;
-  const businessPhoto = req.files.businessPhoto;
   const { introduction, address, gst, email } = req.body;
 
   try {
