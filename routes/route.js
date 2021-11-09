@@ -47,7 +47,7 @@ var uploadMultiple = upload.fields([
 router.post("/sendOtp", user.sendOtp);
 router.post("/verifyOtp", user.verifyOtp);
 router.post("/signup", user.userSignup);
-router.post("/addMoreDetail", uploadMultiple, user.addMoreDetail);
+router.post("/addMoreDetail", user.addMoreDetail);
 router.post("/adminSignup", admin.adminSignup);
 router.post("/createAuction", auction.createAuction);
 router.post("/createbrand", brand.createBrand);

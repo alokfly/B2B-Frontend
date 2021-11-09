@@ -52,14 +52,6 @@ exports.verifyOtp = async (req, res) => {
 
 exports.userSignup = (req, res) => {
   const { ownerName, cName, email, state, city } = req.body;
-
-  // bcrypt.hash(password, 10, function (err, hash) {
-  //   if (err) {
-  //     return res.json({
-  //       msg: "Somthing Wrong, Try Later !",
-  //       err: err,
-  //     });
-  //   } else {
   user
     .create({
       ownerName,
@@ -96,9 +88,6 @@ exports.addMoreDetail = async (req, res) => {
         introduction,
         address,
         gst,
-        profileImage,
-        brandIcon,
-        businessPhoto,
       }
     );
     return res.status(200).json({ msg: "Data successfully updated" });
